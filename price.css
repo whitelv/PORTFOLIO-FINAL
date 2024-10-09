@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    height: 100vh;
+}
+
+
+
+header{
+    /*position: absolute;*/
+    width: 100vw;
+    z-index: 5;
+    background: #474929;
+}
+
+
+
+a, .btn{
+    transition: all 300ms ease;
+}
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav{
+    height: 12vh;
+    max-width: 80%;
+    margin-inline: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.px{
+    height: 100px;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+    background: white;
+    padding: 5px 15px;
+}
+
+.nav-links li{
+    background: #fff;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: #b6a91b;
+    cursor: pointer;
+}
+
+.logo{
+    background: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+/* HAMBURGER MENU*/
+.hamburger-nav{
+    display: none;
+
+}
+
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+}
+
+.hamburger-icon{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+}
+
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background: black;
+    transition: all 300ms ease-in-out;
+}
+
+.menu-links{
+    z-index: 100;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+
+    margin-top: 20px;
+}
+
+.menu-links a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+.menu-links li{
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.menu-links.open{
+    max-height: 300px;
+}
+
+
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(6px, 12px);
+}
+
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(6px, -12px);
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+.hamburger-icon span:nth-child(2){
+    opacity: 1;
+}
+.hamburger-icon span:last-child{
+    transform: none;
+}
+
+main{
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: self-start;
+}
+
+form{
+    width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /*padding: 2rem;*/
+    border-bottom-right-radius: 30px;
+    /*padding-top: 17vh;*/
+}
+
+.right{
+    padding: 3rem 0 2rem 2rem;
+}
+
+.right-title{
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+    color: rgba(122, 65, 5, 1);
+    border-bottom: 1px dashed rgba(122, 65, 5, 1);
+    width: fit-content;
+}
+
+input{
+    border-radius: 5px;
+    border: 2px solid rgba(71, 73, 41, 0.36);
+    color: rgba(122, 65, 5, 1);
+
+}
+.number_input_group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.input-group .input_label{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    color: rgb(129, 106, 84);
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group input[type="date"]
+{
+    width: 100%;
+    padding: 10px 5px;
+    text-align: right;
+    position: relative;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="number"]:focus,
+.input-group input[type="date"]:focus{
+
+    outline: 1px solid #474929;
+}
+
+
+.pseudo-name,
+.pseudo-phone,
+.pseudo-pages{
+    position: relative;
+}
+
+
+.pseudo-name:before{
+    position: absolute;
+    content: "N";
+    height: 100%;
+    background: #474929;
+    background-size: 20px;
+    display: grid;
+    place-content: center;
+    z-index: 100;
+    width: 15%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    /*margin: 5px;*/
+    font-size: 1rem;
+    color: white;
+}
+
+.pseudo-phone:before{
+    position: absolute;
+    content: "+";
+    height: 100%;
+    background: #474929;
+    background-size: 20px;
+    display: grid;
+    place-content: center;
+    z-index: 100;
+    width: 20%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    /*margin: 5px;*/
+    font-size: 1rem;
+    color: white;
+}
+
+.pseudo-pages:before{
+    position: absolute;
+    content: "P";
+    height: 100%;
+    background: #474929;
+    background-size: 20px;
+    display: grid;
+    place-content: center;
+    z-index: 100;
+    width: 20%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    /*margin: 5px;*/
+    font-size: 1rem;
+    color: white;
+}
+
+
+.input-group input[type="date"]::-webkit-calendar-picker-indicator {
+    /*background: rgba(122, 65, 5, 1);*/
+    position: absolute;
+
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-group .radio{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.radio-group{
+    padding: 5px 5px;
+    border: 2px solid rgba(71, 73, 41, 0.36) ;
+    border-radius: 5px;
+
+}
+
+.radio-group input{
+
+    accent-color: #f1683a;
+}
+
+.radio-group label{
+    color: rgba(122, 65, 5, 1);
+}
+
+.button-group{
+    display: flex;
+    gap: 2rem;
+}
+
+
+.button-group button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #474929;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.button-group button:hover{
+    background: rgba(71, 73, 41, 0.73);
+}
+
+.left{
+    background: rgba(71, 73, 41, 0.73);
+    padding: 3rem 2rem 2rem 2rem;
+    border-bottom-right-radius: 30px;
+    color: #fff7e9;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.left-title{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff7e9;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #fff7e9;
+    width: fit-content;
+}
+
+.left-description{
+    margin-bottom: 2rem;
+}
+
+.price-block{
+    width: 100%;
+    background: #fff7e9;
+    color: rgba(122, 65, 5, 1);
+    border-radius: 5px;
+    border-top: 5px solid #f1683a;
+    padding: 15px;
+    margin-bottom: 3rem;
+}
+
+.discount-price{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+}
+
+.discount-text{
+    font-size: 1rem;
+}
+.discount-result{
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.full-text{
+    font-size: 1rem;
+}
+.full-result{
+    font-size: 3rem;
+    font-weight: 700;
+    text-decoration: line-through;
+}
+
+.results{
+    width: 100%;
+    padding: 0.7rem ;
+    border-radius: 5px;
+    border: none;
+    background: #fff7e9;
+    color: rgba(122, 65, 5, 1);
+    margin-bottom: 0.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.results:hover{
+    background: #f1683a;
+    color: white;
+    cursor: pointer;
+}
+
+.success{
+    text-align: center;
+    border-bottom: 1px dashed #fff7e9;
+    width: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+.none{
+    display: none;
+}
+
+
+/* REQUIRED*/
+.required{
+    color: rgba(199,45,45,0.74);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 10px;
+    margin-top: 5px;
+}
+.required-radio{
+    color: rgba(199,45,45,0.74);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.empty{
+    display: none;
+    transition: all 0.5s ease-in-out;
+
+}
+.empty-radio{
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.red_border{
+    border-color: rgba(199,45,45,0.74);
+
+}
+.red_color{
+    color: rgba(199,45,45,0.74);
+}
+
+.invalid_number{
+    display: none;
+}
+
+.invalid_page{
+    display: none;
+}
+
+.invalid_date{
+    display: none;
+}
+.left img{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform:  translate(-50%, -50%);
+    padding: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

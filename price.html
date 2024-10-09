@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+      <link rel="shortcut icon" href="images/Frame%201.png" type="image/x-icon">
+      <link rel="stylesheet" href="price.css">
+      <link rel="stylesheet" href="mediaquaries.css">
+
+    </head>
+    <body>
+      <header>
+        <nav class="desktop-nav">
+          <div class="logo">
+            LV
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="">Price</a></li>
+          </ul>
+        </nav>
+        <nav class="hamburger-nav">
+          <div class="logo">
+            LV
+          </div>
+          <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="menu-links" >
+              <li><a href="" onclick="toggleMenu()">Home</a></li>
+              <li><a href="projects.html" onclick="toggleMenu()">Projects</a></li>
+              <li><a href="" onclick="toggleMenu()">Price</a></li>
+            </div>
+          </div>
+
+        </nav>
+      </header>
+      <main>
+        <form>
+          <div class="right">
+              <h2 class="right-title">Price Calculator</h2>
+              <div class="input-group">
+                <label for="input_name" class="input_label">Name</label>
+                <div class=" pseudo-name">
+                  <input type="text" id="input_name" placeholder="John" required>
+                </div>
+                <p class="required empty">This field is required</p>
+    <!--            <p class="required invalid_one">Must be a valid day</p>-->
+    <!--            <p class="required invalid_form">Must be a valid date</p>-->
+              </div>
+                <div class="number_input_group">
+                  <div class="input-group">
+                    <label for="input_phone" class="input_label">Phone Number</label>
+                    <div class=" pseudo-phone">
+                      <input type="number" id="input_phone" placeholder="+38000000000" required>
+                    </div>
+                    <p class="required empty">This field is required</p>
+                    <p class="required invalid_number">Must have 10 numbers</p>
+      <!--              <p class="required invalid_form">Must be a valid date</p>-->
+                  </div>
+
+
+
+                <div class="input-group">
+                  <label for="input_pages" class="input_label">Pages Number</label>
+                  <div class="pseudo-pages">
+                    <input type="number" id="input_pages" placeholder="1-5" required>
+                  </div>
+                  <p class="required empty">This field is required</p>
+                  <p class="required invalid_page">Must be between 1 and 5</p>
+    <!--              <p class="required invalid_form">Must be a valid date</p>-->
+                </div>
+                </div>
+
+
+
+                <div class="input-group">
+                  <label  class="input_label">Payment System</label>
+                  <div class="radio">
+                    <div class="radio-group">
+                      <input type="radio" name="bank" id="yes" value="y" required>
+                      <label for="yes">Payment </label>
+                    </div>
+                    <div class="radio-group">
+                      <input type="radio" name="bank" id="no" value="n" required>
+                      <label for="no">No Payment </label>
+                    </div>
+                  </div>
+                    <p class="required empty-radio">This field is required</p>
+              </div>
+
+
+                <div class="input-group">
+                  <label  class="input_label">Website Format</label>
+                  <div class="radio">
+                    <div class="radio-group">
+                      <input type="radio" name="format" id="static" value="s" required>
+                      <label for="static">Static</label>
+                    </div>
+                    <div class="radio-group">
+                      <input type="radio" name="format" id="dynamic" value="d" required>
+                      <label for="dynamic">Dynamic</label>
+                    </div>
+                  </div>
+                  <p class="required empty-radio">This field is required</p>
+                </div>
+
+
+
+                <div class="input-group">
+                  <label for="input_deadline" class="input_label">Deadline</label>
+                  <input type="date" id="input_deadline" required>
+                  <p class="required empty">This field is required</p>
+                  <p class="required invalid_date">Must be a valid date</p>
+    <!--              <p class="required invalid_form">Must be a valid date</p>-->
+                </div>
+
+              <div class="button-group">
+                <button class="calc" type="submit">Calculate</button>
+                <button class="reset" type="reset">Reset</button>
+              </div>
+          </div>
+          <div class="left">
+            <img src="images/time.png" alt="" width="80%">
+
+          </div>
+
+        </form>
+      </main>
+      <script src="script.js"></script>
+    </body>
+</html>

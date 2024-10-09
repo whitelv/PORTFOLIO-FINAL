@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+}
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+a, .btn{
+    transition: all 300ms ease;
+}
+
+nav, .nav-links {
+
+    display: flex;
+}
+
+nav{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1rem;
+    background: rgba(122, 65, 5, 1);;
+    padding: 5px 15px;
+}
+.nav-links li{
+    background: rgba(122, 65, 5, 1);;
+    /*padding: 5px 15px;*/
+    /*border-radius: 10px;*/
+}
+a{
+    color: #f4f4f5;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover{
+    color: #b6a91b;
+    cursor: pointer;
+}
+
+.logo{
+    background: rgba(122, 65, 5, 1);
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: 900;
+    color: white;
+}
+/* HAMBURGER MENU*/
+.hamburger-nav{
+    display: none;
+
+}
+
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon{
+    background-color: rgba(122, 65, 5, 1);
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+}
+
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: all 300ms ease-in-out;
+}
+
+.menu-links{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(122, 65, 5, 1);
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    margin-top: 20px;
+
+}
+
+.menu-links a{
+    display: block;
+    /*padding: px;*/
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+    color: white;
+}
+
+.menu-links li{
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.menu-links.open{
+    max-height: 200px;
+}
+
+
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(6px, 12px);
+}
+
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(6px, -12px);
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+.hamburger-icon span:nth-child(2){
+    opacity: 1;
+}
+.hamburger-icon span:last-child{
+    transform: none;
+}
+@media screen and (max-width: 1200px){
+    .desktop-nav{
+        display: none;
+    }
+    .hamburger-nav{
+        display: flex;
+    }
+
+}
+
+/* carousel */
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 15%;
+    width: 400px;
+    max-width: 100%;
+    left: 10%;
+    /*transform: translateX(-50%);*/
+    padding: 2% 5% 2% 2%;
+    box-sizing: border-box;
+    color: #474929;
+    text-shadow: 0 5px 10px #0004;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: rgba(122, 65, 5, 1);
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: rgba(122, 65, 5, 1);
+    letter-spacing: 3px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+.carousel .list .item .buttons button:hover{
+
+    background-color: rgba(122, 65, 5, 0.51);
+    cursor: pointer;
+
+}
+
+
+.blur{
+    filter: blur(5px);
+}
+
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 50%;
+    /*border-radius: 20px;*/
+
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 62%;
+    z-index: 100;
+    width: 100px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: transparent;
+    width: fit-content;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    /*border-radius: 50%;*/
+    background-color: rgba(122, 65, 5, 1);
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: rgba(122, 65, 5, 1);
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content {
+        width: fit-content;
+    }
+    .carousel .list .item .content .des{
+        display: none;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+
+}

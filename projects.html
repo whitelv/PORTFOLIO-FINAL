@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_project.css">
+    <link rel="shortcut icon" href="images/Frame%201.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="desktop-nav">
+            <div class="logo">
+                LV
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="price.html">Price</a></li>
+            </ul>
+        </nav>
+        <nav class="hamburger-nav">
+            <div class="logo">
+                LV
+            </div>
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links" >
+                    <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="price.html" onclick="toggleMenu()">Price</a></li>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img class="blur" src="images/design1.jpg">
+                <div class="content">
+                    <div class="author">VYTVYTSKYI</div>
+                    <div class="title">CARDS</div>
+                    <div class="topic">PAGE</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        This site offers a comprehensive set of project management tools powered by artificial intelligence. It helps to form optimal teams, assess progress and quality, and predict potential issues during project execution. Innovative algorithms analyze millions of data points to ensure efficient task completion and project success for every undertaking.                    </div>
+                    <div class="buttons">
+                        <button class="visit1">VISIT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="blur" src="images/design2.jpg">
+                <div class="content">
+                    <div class="author">VYTVYTSKYI</div>
+                    <div class="title">FYLO</div>
+                    <div class="topic">STORAGE</div>
+                    <div class="des">
+                        This site serves as a platform for managing cloud storage, allowing users to store, organize, and track their storage usage in real time. Its simple interface provides access to key functions for uploading and saving files, while also displaying information on current storage usage and available resources for continued work.                    </div>
+                    <div class="buttons">
+                        <button class="visit2">VISIT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="blur" src="images/design3.jpg">
+                <div class="content">
+                    <div class="author">VYTVYTSKYI</div>
+                    <div class="title">PREVIEW</div>
+                    <div class="topic">PAGE</div>
+                    <div class="des">
+                        This website showcases a particular perfume, offering a luxurious and detailed experience for users to discover its unique scent. The design reflects the elegance and sophistication of the fragrance, guiding visitors through the story behind the creation, its inspiration, and the emotions it evokes.                    </div>
+                    <div class="buttons">
+                        <button class="visit3">VISIT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="blur" src="images/design44.png">
+                <div class="content">
+                    <div class="author">VYTVYTSKYI</div>
+                    <div class="title">RECIPE </div>
+                    <div class="topic">PAGE</div>
+                    <div class="des">
+                        This website is dedicated to the art of cooking, offering users a wide array of recipes, tips, and culinary inspiration. The design is user-friendly, making it easy for both beginners and experienced chefs to find what they need. Visitors can explore diverse recipes, from quick weekday meals to gourmet dishes, each with step-by-step instructions and detailed ingredient lists.                     </div>
+                    <div class="buttons">
+                        <button class="visit4">VISIT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="images/design11.png">
+                <div class="content">
+                    <div class="title">
+                        Card Page
+                    </div>
+                    <div class="description">
+                        Website
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/design2.jpg">
+                <div class="content">
+                    <div class="title">
+                        Fylo Storage
+                    </div>
+                    <div class="description">
+                        Website
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/design22.png">
+                <div class="content">
+                    <div class="title">
+                        Preview Page
+                    </div>
+                    <div class="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/design44.png">
+                <div class="content">
+                    <div class="title">
+                        Cooking Page
+                    </div>
+                    <div class="description">
+                        Website
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
