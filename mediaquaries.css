@@ -1,12 +1,34 @@
-@media screen and (max-width: 1200px){
-    .desktop-nav{
-        display: none;
+@media screen and (max-width: 1200px) {
+    .desktop-nav {
+        display: none; /* Hide desktop nav */
     }
-    .hamburger-nav{
+
+    .hamburger-nav {
+        display: flex; /* Show hamburger menu */
+    }
+    .author-grid{
         display: flex;
+        flex-direction: column;
+    }
+    .author-text{
+        text-align: center;
+        font-size: 12px;
+    }
+    .video-container{
+        display: grid;
+        place-content: center;
+        width: 100%;
+
+    }
+
+    .video-container iframe{
+        width: 500px;
+        border-radius: 0;
     }
 
 }
+
+
 
 
 

@@ -230,9 +230,9 @@ a:hover{
 }
 
 
-.blur{
-    filter: blur(5px);
-}
+/*.blur{*/
+/*    filter: blur(5px);*/
+/*}*/
 
 /* thumbail */
 .thumbnail{
@@ -464,3 +464,4 @@ a:hover{
     }
 
 }
+

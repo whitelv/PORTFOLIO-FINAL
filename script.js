@@ -5,8 +5,6 @@ function toggleMenu(){
     icon.classList.toggle("open")
 }
 
-
-
 // PRICE PAGE
 
 const labelArray = [...document.querySelectorAll(".input_label")].filter(value => {
@@ -124,7 +122,7 @@ const count_price = function (){
     }else if(days < 20){
         return price * 1.2
     }else {
-        return price
+        return price * 6
     }
 }
 
@@ -138,26 +136,26 @@ button_calc.addEventListener("click", function (e){
             correct_pages() &&
             correct_date()){
             const html = `
-                <h2 class="left-title">Results</h2>
+                <h2 class="left-title">Результат</h2>
                 <p class="left-description">
-                    We will build a ${input_pages.value}-page 
-                    ${((radio_static.checked ? radio_static.value : radio_dynamic.value) === "d" ? "dynamic" : "static")} 
-                    website ${((radio_yes.checked ? radio_yes.value : radio_no.value) === "y" ? "with" : "without")} payment integration. 
-                    Thank you for providing specify the deadline - ${input_deadline.value} for delivery.
+                    Ми створимо ${input_pages.value}-сторінковий
+                    ${((radio_static.checked ? radio_static.value : radio_dynamic.value) === "d" ? "динамічний" : "статичний")}
+                    вебсайт ${((radio_yes.checked ? radio_yes.value : radio_no.value) === "y" ? "з" : "без")} інтеграції платежів.
+                       Дякуємо, що вказали крайній термін — ${input_deadline.value} для доставки.
 
                 </p>
                 <div class="price-block">
                     <div class="discount-price">
-                        <p class="discount-text">Discount Price:</p>
-                        <p class="discount-result">$${count_price() * 0.8}.00</p>
+                        <p class="discount-text">Ціна зі знижкою:</p>
+                        <p class="discount-result">₴${count_price() * 0.8}.00</p>
                     </div>
                     <div class="full-price">
-                        <p class="full-text">Full price:</p>
-                        <p class="full-result">$${count_price()}.00</p>
+                        <p class="full-text">Повна ціна:</p>
+                        <p class="full-result">₴${count_price()}.00</p>
                     </div>
                 </div>
-                <button type="button" class="results">Send Results</button>
-                <p class="success none">Was successfully sent!</p>
+                <button type="button" class="results">Надіслати Результати</button>
+                <p class="success none">Запит був успіщно надісланий</p>
             `
 
 
@@ -189,22 +187,6 @@ button_reset.addEventListener("click", function (e){
     radio_static.checked = false
     radio_dynamic.checked = false
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
