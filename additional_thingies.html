@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Інтерактивна сторінка</title>
+  <link rel="shortcut icon" href="images/Frame%201.png" type="image/x-icon">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font: inherit;
+    }
+    body {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      height: 100vh;
+      color: rgb(199, 58, 134);
+    }
+    h1{
+      font-size: 2rem;
+      font-weight: 900;
+      text-align: center;
+      margin-block: 2rem;
+    }
+
+    #toggleMenu{
+      padding: 1rem 2rem;
+      margin-inline: auto;
+      display: block;
+      margin-top: 2rem;
+      background: #474929;
+      color: #eeeeee;
+      border: 0;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      transition: all 0.5s ease-in-out;
+      border-radius: 15px;
+    }
+
+    #toggleMenu:hover{
+      box-shadow: none;
+      background: rgb(199, 58, 134);
+    }
+
+
+    .menu {
+      display: none;
+
+    }
+
+    .list{
+      list-style: none;
+    }
+
+    .list li{
+      margin-inline: auto;
+      /*display: block;*/
+      margin-top: 2rem;
+      background: #474929;
+      color: #eeeeee;
+      width: fit-content;
+      padding: 10px 15px;
+      transition: all 0.5s ease-in-out;
+    }
+    a{
+      color: #eeeeee;
+      text-decoration: none;
+    }
+
+    li:hover{
+      background: rgb(199, 58, 134);
+    }
+
+
+    .flex{
+      display: flex;
+      gap: 4rem;
+      width: 80%;
+      margin-inline: auto;
+    }
+    .map, iframe {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 20px;
+    }
+    .exchange{
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Інтерактивна сторінка</h1>
+  <div class="flex">
+    <div class="map">
+      <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.9531833761453!2d24.03111197640734!3d49.83825317142164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add22b5c8c7ff%3A0xc0fca84ecf9294f8!2sLviv!5e0!3m2!1sen!2sua!4v1697282396961!5m2!1sen!2sua"
+              allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+    <div class="commonninja_component pid-438284a8-3455-44ac-9ecc-df30ceb08860"></div>
+  </div>
+
+
+  <button id="toggleMenu">Меню</button>
+  <div class="menu">
+    <ul class="list">
+      <li><a href="index.html">Головна</a></li>
+      <li><a href="projects.html">Проєкти</a></li>
+      <li><a href="price.html">Ціна</a></li>
+    </ul>
+  </div>
+
+
+  <script>
+    $(document).ready(function() {
+      $('#toggleMenu').click(function() {
+        $('.menu').slideToggle();
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+</html>

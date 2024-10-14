@@ -33,3 +33,11 @@ function countDownTime(){
 }
 
 setInterval(countDownTime, 1000);
+
+
+const logoBig = document.querySelector(".logo-big")
+
+logoBig.addEventListener("click", function (){
+    window.location.href = "additional_thingies.html";
+}
+)
